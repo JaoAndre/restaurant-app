@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/homeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Início"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tablesSearch"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_gray_rounded"
+        android:drawableStart="@drawable/icon_search"
+        android:drawableLeft="@drawable/icon_search"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="Procurar por mesa / pedido."
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeTitle" />
+
+    <TextView
+        android:id="@+id/mainOrdersTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="left"
+        android:text="Pedidos"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablesSearch" />
+
+    <View
+        android:id="@+id/mainOrdersView"
+        android:layout_width="80dp"
+        android:layout_height="2dp"
+        android:background="@drawable/shape_yellow_rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainOrdersTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainOrdersRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainOrdersView"
+        tools:listitem="@layout/item_main_order" />
+
+    <TextView
+        android:id="@+id/mainTablesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="left"
+        android:text="Mesas"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainOrdersRecyclerView" />
+
+    <View
+        android:id="@+id/mainTablesView"
+        android:layout_width="80dp"
+        android:layout_height="2dp"
+        android:background="@drawable/shape_yellow_rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTablesTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainTablesRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTablesView"
+        tools:listitem="@layout/item_main_table" />
+
+    <LinearLayout
+        android:id="@+id/homeLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/homeTablesButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/icon_table" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/shape_yellow_rounded"
+            android:padding="10dp"
+            android:src="@drawable/icon_home" />
+
+        <ImageButton
+            android:id="@+id/homeOrdersButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/icon_list" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".LoginScreen">
+
+    <TextView
+        android:id="@+id/loginTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Bem-vindo de volta!"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loginSubtitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Faça login para continuar sua jornada."
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginTitleTextView" />
+
+    <EditText
+        android:id="@+id/loginEditUser"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape_gray_rounded"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginSubtitleTextView" />
+
+    <EditText
+        android:id="@+id/loginEditPassword"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_gray_rounded"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginEditUser" />
+
+    <Button
+        android:id="@+id/loginConnectButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Vamos lá!"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginEditPassword" />
+
+    <TextView
+        android:id="@+id/loginOthersTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Ou continue com"
+        android:textColor="@color/dark_gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginConnectButton" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/dark_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/loginOthersTextView"
+        app:layout_constraintEnd_toStartOf="@+id/loginOthersTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/loginOthersTextView" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/dark_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/loginOthersTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loginOthersTextView"
+        app:layout_constraintTop_toTopOf="@+id/loginOthersTextView" />
+
+    <Button
+        android:id="@+id/loginFaceButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape_rounded_bordered"
+        android:text="Face"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/loginDigitalButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginOthersTextView" />
+
+    <Button
+        android:id="@+id/loginDigitalButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_rounded_bordered"
+        android:text="Digital"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/loginFaceButton"
+        app:layout_constraintEnd_toStartOf="@+id/loginCodeButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/loginFaceButton"
+        app:layout_constraintTop_toTopOf="@+id/loginFaceButton" />
+
+    <Button
+        android:id="@+id/loginCodeButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_rounded_bordered"
+        android:text="Código"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/loginDigitalButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/loginDigitalButton"
+        app:layout_constraintTop_toTopOf="@+id/loginDigitalButton" />
+
+    <TextView
+        android:id="@+id/loginHelpTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Problemas para fazer login? Entre em contato com o suporte."
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginFaceButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/shape_gray_rounded">
+
+    <TextView
+        android:id="@+id/ordersOrderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Mesa 01"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_yellow_rounded"
+        app:layout_constraintBottom_toBottomOf="@+id/ordersOrderId"
+        app:layout_constraintEnd_toStartOf="@+id/ordersTableId"
+        app:layout_constraintStart_toEndOf="@+id/ordersOrderId"
+        app:layout_constraintTop_toTopOf="@+id/ordersOrderId" />
+
+    <TextView
+        android:id="@+id/ordersTableId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="4 Pessoas"
+        app:layout_constraintStart_toEndOf="@+id/ordersOrderId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tablesItemOrdersText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Pedidos Feitos:"
+        app:layout_constraintBottom_toTopOf="@+id/tablesItemButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ordersOrderId" />
+
+    <TextView
+        android:id="@+id/tablesItemOrdersAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="05"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/tablesItemOrdersText"
+        app:layout_constraintStart_toEndOf="@+id/tablesItemOrdersText"
+        app:layout_constraintTop_toTopOf="@+id/tablesItemOrdersText" />
+
+    <Button
+        android:id="@+id/tablesItemButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Gerenciar Mesa"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
