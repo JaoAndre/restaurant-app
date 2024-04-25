@@ -15,11 +15,8 @@ import com.example.projetorestaurante.adapter.MainOrderItemAdapter;
 import com.example.projetorestaurante.adapter.MainTableItemAdapter;
 
 public class MainActivity extends AppCompatActivity {
-
     private ImageButton homeTablesButton, homeOrdersButton;
     private RecyclerView mainOrdersRecyclerView, mainTablesRecyclerView;
-    private MainOrderItemAdapter orderAdapter;
-    private MainTableItemAdapter tableAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +34,8 @@ public class MainActivity extends AppCompatActivity {
         mainOrdersRecyclerView = findViewById(R.id.mainOrdersRecyclerView);
         mainTablesRecyclerView = findViewById(R.id.mainTablesRecyclerView);
 
-        orderAdapter = new MainOrderItemAdapter();
-        mainOrdersRecyclerView.setAdapter(orderAdapter);
-
-        tableAdapter = new MainTableItemAdapter();
-        mainTablesRecyclerView.setAdapter(tableAdapter);
+        mainOrdersRecyclerView.setAdapter(new MainOrderItemAdapter());
+        mainTablesRecyclerView.setAdapter(new MainTableItemAdapter());
 
         homeTablesButton.setOnClickListener(view -> {
             Intent intent = new Intent(this, TablesScreen.class);

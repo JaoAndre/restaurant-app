@@ -19,7 +19,7 @@ public class OrdersItemAdapter extends RecyclerView.Adapter<OrdersItemAdapter.Or
 
     @Override
     public void onBindViewHolder(@NonNull OrdersItemAdapterHolder holder, int position) {
-
+        holder.setupInnerRecyclerView();
     }
 
     @Override
@@ -30,6 +30,11 @@ public class OrdersItemAdapter extends RecyclerView.Adapter<OrdersItemAdapter.Or
     class OrdersItemAdapterHolder extends RecyclerView.ViewHolder {
         public OrdersItemAdapterHolder(@NonNull View itemView) {
             super(itemView);
+        }
+
+        public void setupInnerRecyclerView() {
+            RecyclerView recyclerView = itemView.findViewById(R.id.ordersOrderItemRecyclerView);
+            recyclerView.setAdapter(new InnerAdapter());
         }
     }
 }

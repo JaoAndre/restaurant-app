@@ -13,9 +13,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class LoginScreen extends AppCompatActivity {
-
-    private Button loginConnectButton;
     private EditText loginEditUser, loginEditPassword;
+    private Button loginConnectButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +27,15 @@ public class LoginScreen extends AppCompatActivity {
             return insets;
         });
 
-        loginConnectButton = findViewById(R.id.loginConnectButton);
         loginEditUser = findViewById(R.id.loginEditUser);
         loginEditPassword = findViewById(R.id.loginEditPassword);
+        loginConnectButton = findViewById(R.id.loginConnectButton);
 
         loginConnectButton.setOnClickListener(view -> checkLogin());
     }
 
     public void checkLogin() {
-        String username = loginEditUser.getText().toString().toLowerCase();
+        String username = loginEditUser.getText().toString();
         String password = loginEditPassword.getText().toString();
 
         if (username.equals("admin") && password.equals("12345")) {

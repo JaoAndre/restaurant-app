@@ -17,7 +17,6 @@ public class OrdersScreen extends AppCompatActivity {
 
     private ImageButton ordersTablesButton, ordersHomeButton;
     private RecyclerView ordersRecyclerView;
-    private OrdersItemAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +33,7 @@ public class OrdersScreen extends AppCompatActivity {
         ordersHomeButton = findViewById(R.id.ordersHomeButton);
         ordersRecyclerView = findViewById(R.id.ordersRecyclerView);
 
-        adapter = new OrdersItemAdapter();
-        ordersRecyclerView.setAdapter(adapter);
+        ordersRecyclerView.setAdapter(new OrdersItemAdapter());
 
         ordersTablesButton.setOnClickListener(view -> {
             Intent intent = new Intent(this, TablesScreen.class);

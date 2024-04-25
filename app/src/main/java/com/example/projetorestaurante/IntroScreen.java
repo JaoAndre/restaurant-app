@@ -11,9 +11,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class IntroScreen extends AppCompatActivity {
-
-    private Button introConnectButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +22,7 @@ public class IntroScreen extends AppCompatActivity {
             return insets;
         });
 
-        introConnectButton = findViewById(R.id.introConnectButton);
+        Button introConnectButton = findViewById(R.id.introConnectButton);
 
         introConnectButton.setOnClickListener(view -> {
             Intent intent = new Intent(this, LoginScreen.class);
